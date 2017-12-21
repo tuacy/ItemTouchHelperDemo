@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.gradle/
+.idea/
+ItemTouchHelperDemo.iml
+build/
+gradle/
+gradlew
+gradlew.bat
+local.properties
+app/app.iml
+app/build
