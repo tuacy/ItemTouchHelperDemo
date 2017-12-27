@@ -10,3 +10,5 @@ gradlew.bat
 local.properties
 app/app.iml
 app/build
+将删除 app/libs/
+将删除 libs/

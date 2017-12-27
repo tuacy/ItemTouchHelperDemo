@@ -3,11 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/layout_slide_delete"
+        android:id="@+id/layout_item_decoration_padding"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"
@@ -28,12 +27,12 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
             android:textAllCaps="false"
-            android:text="滑动删除" />
+            android:text="ItemDecoration Item 间距" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_slide_change_position"
+        android:id="@+id/layout_item_decoration_divider"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"
@@ -54,7 +53,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
             android:textAllCaps="false"
-            android:text="滑动换位" />
+            android:text="ItemDecoration Item 分割线" />
 
     </LinearLayout>
 
