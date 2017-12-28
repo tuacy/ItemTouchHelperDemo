@@ -5,6 +5,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.View;
 
 public class ItemDecorationSpace extends RecyclerView.ItemDecoration {
@@ -32,7 +33,8 @@ public class ItemDecorationSpace extends RecyclerView.ItemDecoration {
 			int spanCount = gridLayoutManager.getSpanCount();
 			//行(如果不是最后一行)
 			int rowCount = itemCount % spanCount == 0 ? itemCount / spanCount : itemCount / spanCount + 1;
-			if (currentPosition <= (rowCount - 1) * spanCount) {
+			Log.d("tuacy", rowCount + " = row");
+			if (currentPosition < (rowCount - 1) * spanCount) {
 				outRect.bottom = mVerticalOffset;
 			}
 			//列(如果不是最后一列)

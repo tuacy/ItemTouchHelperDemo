@@ -16,11 +16,11 @@ public class ItemSpaceAdapter extends RecyclerView.Adapter<ItemSpaceAdapter.Drag
 
 	private List<String> mDataList;
 
-	ItemSpaceAdapter() {
+	public ItemSpaceAdapter() {
 		this(null);
 	}
 
-	ItemSpaceAdapter(List<String> dataList) {
+	public ItemSpaceAdapter(List<String> dataList) {
 		mDataList = dataList;
 	}
 

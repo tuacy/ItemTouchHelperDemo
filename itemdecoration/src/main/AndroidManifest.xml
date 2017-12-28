@@ -22,6 +22,9 @@
 
         <activity android:name=".divider.ItemDecorationDividerActivity"
             android:label="分割线"/>
+
+        <activity android:name=".sectionpin.ItemDecorationSectionPinActivity"
+            android:label="固定标题栏"/>
     </application>
 
 </manifest>

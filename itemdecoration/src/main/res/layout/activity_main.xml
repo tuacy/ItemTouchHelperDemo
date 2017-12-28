@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
     <LinearLayout
         android:id="@+id/layout_item_decoration_padding"
@@ -54,6 +55,32 @@
             android:layout_marginStart="8dp"
             android:textAllCaps="false"
             android:text="ItemDecoration Item 分割线" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item_decoration_section_pin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false"
+            android:text="ItemDecoration Item 固定标题栏" />
 
     </LinearLayout>
 

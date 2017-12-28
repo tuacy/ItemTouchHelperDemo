@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.tuacy.itemdecoration.R;
@@ -52,6 +51,22 @@ public class ItemDecorationSpaceActivity extends AppCompatActivity {
 
 	private List<String> obtainData() {
 		List<String> dataList = new ArrayList<>();
+		dataList.add("南昌");
+		dataList.add("赣州");
+		dataList.add("宜春");
+		dataList.add("九江");
+		dataList.add("上饶");
+		dataList.add("萍乡");
+		dataList.add("抚州");
+		dataList.add("新余");
+		dataList.add("南昌");
+		dataList.add("赣州");
+		dataList.add("宜春");
+		dataList.add("九江");
+		dataList.add("上饶");
+		dataList.add("萍乡");
+		dataList.add("抚州");
+		dataList.add("新余");
 		dataList.add("南昌");
 		dataList.add("赣州");
 		dataList.add("宜春");
