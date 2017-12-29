@@ -1,1 +1,1 @@
-include ':app', ':itemdecoration'
+include ':app'
