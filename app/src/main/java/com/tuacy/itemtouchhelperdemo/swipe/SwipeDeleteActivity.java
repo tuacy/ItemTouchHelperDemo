@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.dragdelete;
+package com.tuacy.itemtouchhelperdemo.swipe;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,17 +15,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DragDeleteActivity extends AppCompatActivity {
+public class SwipeDeleteActivity extends AppCompatActivity {
 
 	public static void startUp(Context context) {
-		context.startActivity(new Intent(context, DragDeleteActivity.class));
+		context.startActivity(new Intent(context, SwipeDeleteActivity.class));
 	}
 
-	private Context           mContext;
-	private RecyclerView      mRecyclerView;
-	private DragDeleteAdapter mAdapter;
-	private ItemTouchHelper   mItemTouchHelper;
-	private List<String>      mDataList;
+	private Context            mContext;
+	private RecyclerView       mRecyclerView;
+	private SwipeDeleteAdapter mAdapter;
+	private ItemTouchHelper    mItemTouchHelper;
+	private List<String>       mDataList;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class DragDeleteActivity extends AppCompatActivity {
 	}
 
 	private void initData() {
-		mAdapter = new DragDeleteAdapter(mDataList = obtainData());
+		mAdapter = new SwipeDeleteAdapter(mDataList = obtainData());
 		mRecyclerView.setAdapter(mAdapter);
 		mItemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
 			@Override

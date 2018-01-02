@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".dragdelete.DragDeleteActivity"
+        <activity android:name=".swipe.SwipeDeleteActivity"
             android:label="滑动删除"/>
 
-        <activity android:name=".dragchange.DragChangeActivity"
+        <activity android:name=".drag.DragChangeActivity"
             android:label="滑动变换位置"/>
     </application>
 

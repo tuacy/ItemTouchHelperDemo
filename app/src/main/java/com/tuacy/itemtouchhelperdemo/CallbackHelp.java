@@ -5,22 +5,19 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
-/**
- * Created by tuacy on 17-12-25.
- */
 
 public abstract class CallbackHelp {
 
 //	/**
-//	 * 获取不同状态下可以移动的方向(idle:所有可以处理事件的方向swiping+dragging的方向, swiping:滑动的方向, dragging:拖拽的方向)
-//	 * idle:0~7位
-//	 * swiping:8~15位
-//	 * dragging:16~23位
+//	 * 获取不同状态(swipe、drag)下可以移动的方向,包含三种状态的方向:idle:所有可以处理事件的方向swipe+drag的方向、swipe:滑动的方向、drag:拖动的方向
+//	 * idle:0~7位(swipe+drag的方向)
+//	 * swipe:8~15位(滑动方向)
+//	 * drag:16~23位(拖动方向)
 //	 */
 //	public abstract int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder);
 //
 //	/**
-//	 * current holder是否可以拖动到target holder
+//	 * current holder对应的item view是否可以拖动到target holder对应的item view
 //	 *
 //	 * @return:是否可以拖动
 //	 */
@@ -36,9 +33,9 @@ public abstract class CallbackHelp {
 //	public abstract boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target);
 //
 //	/**
-//	 * 当RecyclerView的item长按的时候是否允许进入dragging(拖拽)的状态
+//	 * RecyclerView的item长按的时候是否允许进入drag(拖动)的状态
 //	 *
-//	 * @return　是否允许进入dragging的状态
+//	 * @return　是否允许进入drag的状态
 //	 */
 //	public boolean isLongPressDragEnabled() {
 //		return true;

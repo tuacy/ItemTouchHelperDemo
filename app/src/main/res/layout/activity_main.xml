@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/layout_slide_delete"
+        android:id="@+id/layout_swipe_delete"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"
@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_slide_change_position"
+        android:id="@+id/layout_drag_change_position"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"

@@ -4,7 +4,7 @@ package com.tuacy.itemtouchhelperdemo.utls;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
-import com.tuacy.itemtouchhelperdemo.dragchange.ApkInfo;
+import com.tuacy.itemtouchhelperdemo.drag.ApkInfo;
 
 import java.util.ArrayList;
 import java.util.List;

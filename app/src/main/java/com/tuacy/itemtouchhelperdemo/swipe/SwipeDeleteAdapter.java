@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.dragdelete;
+package com.tuacy.itemtouchhelperdemo.swipe;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -11,15 +11,15 @@ import com.tuacy.itemtouchhelperdemo.R;
 
 import java.util.List;
 
-public class DragDeleteAdapter extends RecyclerView.Adapter<DragDeleteAdapter.DragDeleteHolder> {
+public class SwipeDeleteAdapter extends RecyclerView.Adapter<SwipeDeleteAdapter.DragDeleteHolder> {
 
 	private List<String> mDataList;
 
-	DragDeleteAdapter() {
+	SwipeDeleteAdapter() {
 		this(null);
 	}
 
-	DragDeleteAdapter(List<String> dataList) {
+	SwipeDeleteAdapter(List<String> dataList) {
 		mDataList = dataList;
 	}
 

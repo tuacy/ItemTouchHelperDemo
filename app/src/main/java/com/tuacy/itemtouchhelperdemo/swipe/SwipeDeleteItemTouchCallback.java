@@ -1,10 +1,10 @@
-package com.tuacy.itemtouchhelperdemo.dragdelete;
+package com.tuacy.itemtouchhelperdemo.swipe;
 
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-public class DragDeleteItemTouchCallback extends ItemTouchHelper.Callback{
+public class SwipeDeleteItemTouchCallback extends ItemTouchHelper.Callback{
 
 
 	@Override

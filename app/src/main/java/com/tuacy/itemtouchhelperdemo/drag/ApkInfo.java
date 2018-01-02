@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.dragchange;
+package com.tuacy.itemtouchhelperdemo.drag;
 
 
 import android.graphics.drawable.Drawable;
