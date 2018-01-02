@@ -2,6 +2,7 @@ package com.tuacy.itemtouchhelperdemo.swipe;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -60,6 +61,22 @@ public class SwipeDeleteActivity extends AppCompatActivity {
 			public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
 				mDataList.remove(viewHolder.getAdapterPosition());
 				mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+			}
+
+			@Override
+			public void onChildDraw(Canvas c,
+									RecyclerView recyclerView,
+									RecyclerView.ViewHolder viewHolder,
+									float dX,
+									float dY,
+									int actionState,
+									boolean isCurrentlyActive) {
+				super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+				if(actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
+					//滑动时改变Item的透明度
+					final float alpha = 1 - Math.abs(dX) / (float)viewHolder.itemView.getWidth();
+					viewHolder.itemView.setAlpha(alpha);
+				}
 			}
 		});
 		mItemTouchHelper.attachToRecyclerView(mRecyclerView);
