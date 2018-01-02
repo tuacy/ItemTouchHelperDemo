@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.tuacy.itemtouchhelperdemo.drag.DragChangeActivity;
+import com.tuacy.itemtouchhelperdemo.drag.dragcomplex.DragComplexActivity;
+import com.tuacy.itemtouchhelperdemo.drag.dragsimple.DragSimpleActivity;
 import com.tuacy.itemtouchhelperdemo.swipe.SwipeDeleteActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,10 +24,17 @@ public class MainActivity extends AppCompatActivity {
 				SwipeDeleteActivity.startUp(mContext);
 			}
 		});
-		findViewById(R.id.layout_drag_change_position).setOnClickListener(new View.OnClickListener() {
+		findViewById(R.id.layout_drag_simple).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				DragChangeActivity.startUp(mContext);
+				DragSimpleActivity.startUp(mContext);
+			}
+		});
+
+		findViewById(R.id.layout_drag_complex).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				DragComplexActivity.startUp(mContext);
 			}
 		});
 	}

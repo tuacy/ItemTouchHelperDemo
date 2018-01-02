@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.drag;
+package com.tuacy.itemtouchhelperdemo.drag.dragsimple;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,21 +12,24 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 import com.tuacy.itemtouchhelperdemo.R;
+import com.tuacy.itemtouchhelperdemo.drag.DragCallback;
+import com.tuacy.itemtouchhelperdemo.drag.DragHelper;
+import com.tuacy.itemtouchhelperdemo.utls.ApkInfo;
 import com.tuacy.itemtouchhelperdemo.utls.ApkUtil;
 
 import java.util.List;
 
 
-public class DragChangeActivity extends AppCompatActivity {
+public class DragSimpleActivity extends AppCompatActivity {
 
 	public static void startUp(Context context) {
-		context.startActivity(new Intent(context, DragChangeActivity.class));
+		context.startActivity(new Intent(context, DragSimpleActivity.class));
 	}
 
 	private Context           mContext;
 	private Handler           mMainHandler;
 	private RecyclerView      mRecyclerView;
-	private DragChangeAdapter mAdapter;
+	private DragSimpleAdapter mAdapter;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,12 +42,12 @@ public class DragChangeActivity extends AppCompatActivity {
 	}
 
 	private void initView() {
-		mRecyclerView = findViewById(R.id.recycler_drag_change);
+		mRecyclerView = findViewById(R.id.recycler_drag_simple);
 		GridLayoutManager layoutManager = new GridLayoutManager(mContext, 3);
 		mRecyclerView.setLayoutManager(layoutManager);
 		mRecyclerView.addItemDecoration(new SpaceItemDecoration());
-		ItemPositionChangeCallback itemPositionChangeCallback = new ItemPositionChangeCallback(mItemPositionChangeHelper);
-		ItemTouchHelper touchHelper = new ItemTouchHelper(itemPositionChangeCallback);
+		DragCallback dragCallback = new DragCallback(mDragHelper);
+		ItemTouchHelper touchHelper = new ItemTouchHelper(dragCallback);
 		touchHelper.attachToRecyclerView(mRecyclerView);
 	}
 
@@ -53,7 +56,7 @@ public class DragChangeActivity extends AppCompatActivity {
 	}
 
 	private void initData() {
-		mAdapter = new DragChangeAdapter();
+		mAdapter = new DragSimpleAdapter();
 		mRecyclerView.setAdapter(mAdapter);
 
 		new Thread() {
@@ -78,9 +81,19 @@ public class DragChangeActivity extends AppCompatActivity {
 		return mMainHandler;
 	}
 
-	private ItemPositionChangeHelper mItemPositionChangeHelper = new ItemPositionChangeHelper() {
+	private DragHelper mDragHelper = new DragHelper() {
 		@Override
-		public void onItemPositionChange(int fromPosition, int toPosition) {
+		public void onDragStart() {
+
+		}
+
+		@Override
+		public void onDragEnd() {
+
+		}
+
+		@Override
+		public void onDragPositionChange(int fromPosition, int toPosition) {
 			mAdapter.notifyItemMoved(fromPosition, toPosition);
 		}
 	};

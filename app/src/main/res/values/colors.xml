@@ -11,4 +11,7 @@
     <color name="color_purple">#b388ff</color>
     <color name="color_yellow">#ffff8d</color>
     <color name="color_green">#00e676</color>
+
+    <color name="text_gray">#000000</color>
+    <color name="activity_color">#eeeeee</color>
 </resources>

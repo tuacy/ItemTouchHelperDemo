@@ -21,11 +21,11 @@ public class SwipeDeleteActivity extends AppCompatActivity {
 		context.startActivity(new Intent(context, SwipeDeleteActivity.class));
 	}
 
-	private Context            mContext;
-	private RecyclerView       mRecyclerView;
-	private SwipeDeleteAdapter mAdapter;
-	private ItemTouchHelper    mItemTouchHelper;
-	private List<String>       mDataList;
+	private Context             mContext;
+	private RecyclerView        mRecyclerView;
+	private SwipeDeleteAdapter  mAdapter;
+	private ItemTouchHelper mItemTouchHelper;
+	private List<String>        mDataList;
 
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.drag;
+package com.tuacy.itemtouchhelperdemo.drag.dragsimple;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -9,18 +9,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tuacy.itemtouchhelperdemo.R;
+import com.tuacy.itemtouchhelperdemo.utls.ApkInfo;
 
 import java.util.List;
 
-public class DragChangeAdapter extends RecyclerView.Adapter<DragChangeAdapter.DragChangeHolder> {
+public class DragSimpleAdapter extends RecyclerView.Adapter<DragSimpleAdapter.DragChangeHolder> {
 
 	private List<ApkInfo> mDataList;
 
-	DragChangeAdapter() {
+	DragSimpleAdapter() {
 		this(null);
 	}
 
-	DragChangeAdapter(List<ApkInfo> dataList) {
+	DragSimpleAdapter(List<ApkInfo> dataList) {
 		mDataList = dataList;
 	}
 

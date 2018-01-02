@@ -1,4 +1,4 @@
-package com.tuacy.itemtouchhelperdemo.drag;
+package com.tuacy.itemtouchhelperdemo.drag.dragsimple;
 
 import android.graphics.Rect;
 import android.support.v7.widget.GridLayoutManager;

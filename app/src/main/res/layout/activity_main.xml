@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_drag_change_position"
+        android:id="@+id/layout_drag_simple"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="?android:attr/selectableItemBackground"
@@ -54,7 +54,33 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
             android:textAllCaps="false"
-            android:text="滑动换位" />
+            android:text="drag 实例一" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_drag_complex"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false"
+            android:text="drag 实例二" />
 
     </LinearLayout>
 
